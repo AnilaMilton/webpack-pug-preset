@@ -1,0 +1,76 @@
+extends ./layouts/master.pug
+
+block title
+  title My Page - Home
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  //- Desktop page
+  .top
+    header
+      ul.top__list
+        li
+          a(href="#") Gmail
+        li
+          a(href="#") Images
+        li
+          a(href="#")
+            img(src="../assets/images/google-apps-icon-png-24.jpg", alt="Google apps", class="top__applogo")
+        li
+          figure
+            img(src="../assets/images/user1.png", alt="profile pic", class="top__profilepic")
+
+  .search
+    section
+      img(src="../assets/images/googlelogo.png", alt="Google logo" class="search__logo")
+      form(action="#")
+        input(type="text" name="Search" class="search__searchbar")
+        img(src="../assets/images/search-google-icon-28.jpg", alt="voice search" class="search__vsearch")
+        br
+        input(value="Google Search" name="Google Search" type="submit" class="search__searchbtn")
+        input(value="I'm Feeling Lucky" name="Google Search" type="submit" class="search__luckybtn")
+  
+  .lang
+      ul.lang__list
+        li Google offered in:
+        li 
+          a(href="#") हिन्दी 
+        li 
+          a(href="#") বাংলা 
+        li 
+          a(href="#") తెలుగు 
+        li 
+          a(href="#") मराठी 
+        li 
+          a(href="#") தமிழ் 
+        li 
+          a(href="#") ગુજરાતી 
+        li 
+          a(href="#") ಕನ್ನಡ 
+        li 
+          a(href="#") മലയാളം
+        li 
+          a(href="#") ਪੰਜਾਬੀa
+
+  div
+    footer.bottom
+      ul.bottom__left
+        li
+          a(href="#") Advertising
+        li
+          a(href="#") Business
+        li
+          a(href="#") About 
+        li
+          a(href="#") How search works
+      ul.bottom__right
+        li  
+          a(href="#") Privacy
+        li  
+          a(href="#") Terms
+        li  
+          a(href="#") Settings
