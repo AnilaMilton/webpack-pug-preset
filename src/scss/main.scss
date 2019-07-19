@@ -4,159 +4,180 @@
 // Vendors
 @import './vendors/bootstrap/bootstrap';
 
-// Bem example
-.page {
 
-  &__title {
-    text-align: center;
-
-    &--color-red {
-      color: $red;
-    }
-
-    &--bold {
-      font-weight: bold;
-    }
-  }
+.jumbotron {
+  background-image: url("https://www.smak.co.za/images/bg.jpg");
+  background-size: 100% 100%;
+  color: #b0bec5;
+  margin-bottom: 0;
 }
 
-.searchbar {
 
-  border-radius: 20px;
-  border-color: 1px solid #f2f2f2;
-
-}
-
-.link {
-  color: blue;
-  font-family: arial,sans-serif;
-  font-size: 13px;
+/* ============================================================
+  PRIMARY STRUCTURE
+============================================================ */
+.parallax-container {
+  max-width: 960px;
+  margin: 0 auto;
 }
 
-.otherlinks {
-  color: rgba(0,0,0,0.54);
-  font-family: arial,sans-serif;
-  font-size: 15px;
-}
-.headerlinks {
-  font-family: arial,sans-serif;
-  font-size: 14px;
-  color: rgba(0,0,0,.87);
-}
-.button {
-  background-color: #f2f2f2;
-  border: 1px solid #f2f2f2;
-  border-radius: 4px;
-  color: #5F6368;
-  font-family: arial,sans-serif;
-  font-size: 14px;
-}
+/* ============================================================
+  SECTIONS
+============================================================ */
 
-.signin {
-  font-size: 14px;
-  font-weight: bold;
-  font-family: arial,sans-serif;
-  background-color: blue;
-  border: 1px solid blue;
-  border-radius: 2px;
-}
 
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
-* {
-  font-family: 'Roboto Condensed', sans-serif;
+
+section.module.parallax {
+  padding: 240px 0;
+  background-position: 0 0;
 }
-body {
-  margin: 0;
-}
-.parallax-wrapper {
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
-}
-.background {
-  background-position: center;
-  background-size: cover;
-  display: flex;
-  flex: 1 0 auto;
-  position: relative;
-  z-index: -1;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  transform: translateZ(-1px) scale(2);
-}
-.background--spring {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/da/Precincts_of_Watari-jinja_shrine_in_Spring_season_2.JPG');
-}
-.background--summer {
-  background-image: url('https://images.pexels.com/photos/375152/summer-sun-blooming-season-375152.jpeg?cs=srgb&dl=beautiful-bloom-blossom-375152.jpg&fm=jpg');
-}
-.background--fall {
-  background-image: url('https://images.pexels.com/photos/33060/road-forest-season-autumn.jpg?cs=srgb&dl=autumn-fall-forest-33060.jpg&fm=jpg');
-}
-.background--winter {
-  background-image: url('https://images.pexels.com/photos/235595/pexels-photo-235595.jpeg?cs=srgb&dl=branches-cold-season-235595.jpg&fm=jpg');
-}
-.title {
-  position: absolute;
-  margin: 0;
-  top: calc(50% - 50px);
-  width: 100%;
-  left: 0;
-  right: 0;
+section.module.parallax h1 {
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  height: 100px;
-  color: white;
-  font-size: 5rem;
-  background: rgba(0,0,0,0.4);
+  text-shadow: 0 0 10px white;
+}
+section.module.parallax-1 {
+  background-image: url("https://i.ytimg.com/vi/SwOaV-pzGcA/maxresdefault.jpg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0,123,255,0.4);
+  background-blend-mode: screen;
+}
+section.module.parallax-2 {
+  background-image: url("http://www.planwallpaper.com/static/images/Fall-Nature-Background-Pictures.jpg");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0,123,255,0.4);
+  background-blend-mode: screen;
 }
 
-.season-desc {
-  z-index: 1;
-  position: relative;
-  background: #282E34;
-  color: white;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  line-height: 2em;
-  padding: 3rem;
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  .desc-wrapper {
-    margin: auto;
-    box-sizing: border-box;
+
+@media all and (min-width: 600px) {
+
+
+  section.module.parallax {
+    padding: 300px 0;
   }
-  .season--title {
-    text-align: center;
-    font-size: 4rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin: 20px 0;
-  }
-  .season--about {
-    margin-top: 50px;
-    padding: 0;
+  section.module.parallax h1 {
+    font-size: 96px;
   }
 }
-@media (max-width: 998px) and (orientation: portrait) {
-  .season-desc {
-    padding: 1.5rem 20px;
-    font-size: 1rem;
-    height: unset;
-    min-height: 100vh;
-    .season-title {
-      font-size: 2.5rem;
-      margin: 20px 0;
-      letter-spacing: unset;
-     }
-    .season-about {
-      margin-top: 20px;
-     }
-   }
- }
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 160px;
+  }
+}
+
+@media(max-width: 768px){
+    .col-md-4 {
+      text-align: center;
+      line-height: 30px;
+  }
+}
+.right {
+  text-align: right;
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+
+
+
+.containerq {
+  max-width: 960px;
+}
+
+.panel-default>.panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #e4e5e7;
+  padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.panel-default>.panel-heading a {
+  display: block;
+  padding: 10px 15px;
+}
+
+.panel-default>.panel-heading a:after {
+  content: "";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  float: right;
+  transition: transform .25s linear;
+  -webkit-transition: -webkit-transform .25s linear;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"] {
+  background-color: #eee;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+  content: "\2212";
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.panel-default>.panel-heading a[aria-expanded="false"]:after {
+  content: "\002b";
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.accordion-option {
+  width: 100%;
+  float: left;
+  clear: both;
+  margin: 15px 0;
+}
+
+.accordion-option .title {
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-option .toggle-accordion {
+  float: right;
+  font-size: 16px;
+  color: #6a6c6f;
+}
+
+.accordion-option .toggle-accordion:before {
+  content: "Expand All";
+}
+
+.accordion-option .toggle-accordion.active:before {
+  content: "Collapse All";
+}
+
+.bs-example{
+  margin: 20px;
+}
+.accordion .fa{
+  margin-right: 0.5rem;
+}

@@ -1,6 +1,7 @@
 doctype html
 head
   meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   style.
     body {
     margin: 0;
@@ -33,6 +34,25 @@ head
     background-color: #4CAF50;
     color: white;
     }
+    
+    .navbar .icon {
+    display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+    float: right;
+    display: block;
+    }
+    }
+    @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
     .navbar.responsive a {
     float: none;
     display: block;
@@ -53,10 +73,15 @@ head
 .header
   h2 Hey, watch my Sticky Nav!!!
   p Just scroll down to see the sticky effect.
-#navbar
-  a.active(href='javascript:void(0)') Home
-  a(href='javascript:void(0)') News
-  a(href='javascript:void(0)') Contact
+#navbar.navbar
+  a.icon(href='javascript:void(0);' onclick='myFunction1()')
+    i.fa.fa-bars
+  a.active(href='#home') Home
+  a(href='#news') News
+  a(href='#contact') Contact
+  a(href='#about') About
+ 
+    
 .content
   h3 A R Rahman
   p Let me talk about A R Rahman!!.
@@ -119,4 +144,11 @@ script.
   navbar.classList.remove("sticky");
   }
   }
-  
+  function myFunction1() {
+  var x = document.getElementById("navbar");
+  if (x.classList === "navbar") {
+  x.classList += " responsive";
+  } else {
+  x.classList = "navbar";
+  }
+  }

@@ -1,0 +1,49 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Blog
+
+block basicSeo
+  meta(name='description' content='Blog page')
+  meta(name='keywords', content='blog, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+  //- Desktop page
+  header
+    h1 SIMPLE PAGE
+  body.page
+    nav#page-nav
+      label(for= "hamburger") &#9776;
+      input#hamburger(type="checkbox")
+      ul
+        li
+          a.active(href='') Home
+        li
+          a(href='') News
+        li
+          a(href='') Contact
+        li
+          a(href='') About
+    div.bg
+    section.content
+      div.black
+        h1 Simple Parallax Effect
+        h3 What is Parallax
+        p Parallax scrolling is a special scrolling technique in computer graphics, wherein background images move by the camera slower than foreground images, creating an illusion of depth in a 2D video game and adding to the immersion.
+        p You might be expecting a huge tutorial on Parallax Scrolling but actually this effect has little to no syntax and is easy to achieve in a matter of minutes. Within minutes you can create an amazing effect like the one you see on this page.
+        p So why should we use this syntax and why is it valid? We must set the div to the fixed position so that the image background remains fixed. Secondly we set the width to 100% to cover the document and set the height a little larger to compensate for the scrolled effect. Next we set the top and left positions to 0 so that the background image is set to top left.
+        h3 The JQuery
+        p Like the Css there is not much to expect for the Jquery the syntax is simple and completes the parallax effect so that you can start creating amazing looking pages!
+        p For the JQuery we will be using the Jquery Scroll Function. First we create a new function which is called parallax. In this function we create a variable which is equal to the top of the browser window. Last but not least we change the css so the when the window is scrolled the background image in negatively scrolled by a certain amount of pixels. This effect can be sped up or slowed down.
+      div.white
+        h1 Scroll Down for Demo
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam venenatis orci quis massa consequat consequat. Vestibulum vel velit vitae justo mattis tempus sed id ex. Donec tempus bibendum dolor nec bibendum. Suspendisse potenti. Suspendisse diam mauris, consequat non nulla id, tempor ultricies mi. Proin ullamcorper tortor sit amet quam interdum elementum. Sed convallis urna in faucibus pretium.
+        p Nunc rhoncus aliquet sem, sit amet facilisis purus convallis at. Nam semper tortor id leo varius, vitae pharetra neque volutpat. Donec tempor commodo pretium. Fusce porta, est vel consectetur sollicitudin, magna elit fringilla nisl, sed feugiat ipsum tortor sed nunc. Aenean ac maximus mi. In non dui pharetra, ullamcorper elit at, bibendum sem. Fusce eu libero sodales nisi mattis finibus sed ut metus. Vivamus mollis tortor mauris. Sed quam orci, bibendum finibus neque et, suscipit varius turpis.
+        p Integer non metus neque. Integer varius vehicula eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec augue sapien, dignissim in erat ac, auctor porttitor lectus. Curabitur enim justo, sagittis quis massa vel, fermentum efficitur felis. Phasellus id venenatis odio. Ut sed nunc sit amet quam congue porttitor nec ut magna. In maximus semper dui, eget porttitor erat congue in. In sem erat, laoreet sed pellentesque non, gravida quis ipsum.
+        p Morbi a libero pellentesque, pellentesque augue non, finibus ligula. Donec tincidunt elementum vulputate. Morbi ipsum mauris, molestie quis tellus vitae, iaculis scelerisque libero. Donec erat urna, sollicitudin eget interdum et, faucibus non tortor. Etiam egestas et dolor ac dignissim. Mauris ac imperdiet neque, vel vulputate odio. Fusce ut lectus risus. Sed condimentum dolor ut convallis tempus. Vivamus luctus massa quam, id volutpat justo eleifend sed. Nam vehicula ex a lectus ultrices, ac finibus velit lobortis. Curabitur lobortis maximus mauris quis auctor. Sed in euismod turpis, ut dignissim justo. Vivamus dictum lobortis ipsum vitae dapibus. Maecenas sed semper nisl. Integer velit felis, molestie nec felis eu, mattis accumsan augue.
+        p Donec auctor risus dignissim ligula sagittis molestie. Sed nec dignissim tellus. Praesent nibh augue, euismod sit amet orci a, posuere dignissim odio. Sed pulvinar lorem eros, et vehicula elit consectetur non. Vestibulum vel rutrum sem. Duis venenatis nisi efficitur nulla pellentesque euismod sit amet scelerisque lacus. Aenean nunc nulla, scelerisque sit amet libero sed, vulputate faucibus mi. Nam malesuada quis quam eu dictum. Quisque viverra velit eros, et ultrices erat bibendum ac. Ut lectus orci, bibendum ut lobortis eget, lacinia a dui. Sed interdum purus sed dolor dictum, dictum vestibulum nunc aliquet. Phasellus scelerisque ligula risus, a suscipit leo fringilla nec.
