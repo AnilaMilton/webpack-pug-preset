@@ -12,10 +12,11 @@ body,
   height: 100%;
 }
 
+$color: black;
 .jumbotron {
   // width: 100vw;
   &__container {
-    background: url('../assets/images/slide.jpg');
+    background: url('../assets/images/myuploads/slides.jpg');
     background-size: cover;
     bottom: 0;
     height: 550px;
@@ -65,6 +66,7 @@ body,
     right: 30px;
     top: 15px;
     font-size: 30px;
+
 
   }
 }
