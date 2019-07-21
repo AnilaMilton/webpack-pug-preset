@@ -1,0 +1,136 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Components
+
+block basicSeo
+  meta(name='description' content='test page')
+  meta(name='keywords', content='test, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')  
+
+block content
+
+  //- Desktop page
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
+    a.navbar-brand(href='#') Navbar
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='#')
+            | Home 
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='#') Link
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Dropdown 1
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            a.dropdown-item(href='#') Action
+
+            a.dropdown-item(href='#') Another action
+            .dropdown-divider
+            a.dropdown-item(href='#') Something else here
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Dropdown 2
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            a.dropdown-item(href='#') List item 1
+            a.dropdown-item(href='#') List item 2
+            .dropdown-divider
+            a.dropdown-item(href='#') Another list
+        li.nav-item
+          a.nav-link.disabled(href='#') Disabled
+
+  
+  //- .jumbotron.jumbotron-fluid
+  //-   .container
+  //-     h1.display-4 Fluid jumbotron
+    
+
+  .jumbotron.jumbotron-fluid
+    //- h1.display-4 Hello, world!
+    .jumbotron__container
+
+
+  .content
+    #accordionExample.accordion
+      .card 
+        #headingOne.card-header
+          h2.mb-0
+            button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+              | Collapsible Group Item #1
+        #collapseOne.collapse(aria-labelledby='headingOne', data-parent='#accordionExample')
+          .card-body
+            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      .card
+        #headingTwo.card-header
+          h2.mb-0
+            button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+              | Collapsible Group Item #2
+        #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
+          .card-body
+            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      .card
+        #headingThree.card-header
+          h2.mb-0
+            button.btn.btn-link.collapsed(type='button', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+              | Collapsible Group Item #3
+        #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
+          .card-body
+            | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+    .slide
+      .bd-example
+        #carouselExampleCaptions.carousel.slide(data-ride='carousel')
+          ol.carousel-indicators
+            li.active(data-target='#carouselExampleCaptions', data-slide-to='0')
+            li(data-target='#carouselExampleCaptions', data-slide-to='1')
+            li(data-target='#carouselExampleCaptions', data-slide-to='2')
+          .carousel-inner
+            .carousel-item.active
+              img.d-block.w-100(src='../assets/images/2nd.jpg', alt='...')
+              .carousel-caption.d-none.d-md-block
+                h5 First slide label
+                p Nulla vitae elit libero, a pharetra augue mollis interdum.
+            .carousel-item
+              img.d-block.w-100(src='../assets/images/1st.jpg', alt='...')
+              .carousel-caption.d-none.d-md-block
+                h5 Second slide label
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            .carousel-item
+              img.d-block.w-100(src='../assets/images/3rd.jpg', alt='...')
+              .carousel-caption.d-none.d-md-block
+                h5 Third slide label
+                p Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          a.carousel-control-prev(href='#carouselExampleCaptions', role='button', data-slide='prev')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Previous
+          a.carousel-control-next(href='#carouselExampleCaptions', role='button', data-slide='next')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Next
+
+    // Button trigger modal
+    button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModalCenter')
+      | Launch demo modal
+    // Modal
+    #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+      .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalCenterTitle.modal-title Modal title
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body
+            | ...
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary(type='button') Save changes
+
+
+
+
